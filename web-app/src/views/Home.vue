@@ -10,7 +10,7 @@
           <div class="results"></div>
         </div>
       </div>
-      <div class="cart_button">
+      <div class="cart_button" @click="$router.push('cart')">
         <div class="ui circular button">
           <a class="item">
             <i class="shopping cart icon"></i>
@@ -71,12 +71,33 @@ export default {
   },
   computed:{
     products_len(){
-      return this.products_in_cart.length
+      var products_in_cart_len = 0;
+      for( var product of this.products_in_cart){
+        products_in_cart_len += product.amount;
+      }
+      return products_in_cart_len;
     }
   },
   methods:{
-    addToCart( id ){
-      this.products_in_cart.push( id )
+    /*global global_products_in_cart*/
+    /*eslint no-undef: "error"*/
+    addToCart( product ){
+      var added = false;
+      for (var global_product of global_products_in_cart ){
+        console.log(product.id)
+        if (global_product.id == product.id) {
+          console.log("Exists:")
+          console.log(product.id)
+             global_product.amount += 1;
+             product.amount += 1;
+             added = true;
+        }
+      }
+      if (!added){
+        product.amount = 1;
+        global_products_in_cart.push( product )
+        this.products_in_cart.push( product )
+      }
     }
   }
 }

@@ -17,7 +17,7 @@
         </a>
       </div>
       <div class="extra content">
-        <button class="ui circular button everdose" @click="add(id)" >Add to cart</button>
+        <button class="ui circular button everdose" @click="add({id, name, image, description, price})" >Add to cart</button>
       </div>
     </div>
   </div>
@@ -33,11 +33,12 @@ export default {
 .product{
   display: inline-block;
   margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
 }
-.product .card{
-  -webkit-box-shadow: 0px 0px 22px -4px rgba(222,222,222,1);
-  -moz-box-shadow: 0px 0px 22px -4px rgba(222,222,222,1);
-  box-shadow: 0px 0px 22px -4px rgba(222,222,222,1);
+.product .ui.card{
+  border-color: yellow !important;
 }
 .ui.circular.button.everdose{
   color: white;

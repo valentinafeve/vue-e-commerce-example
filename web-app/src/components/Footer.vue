@@ -14,5 +14,6 @@ export default {
   width: 100%;
   height: 120px;
   background: #434343;
+  position: relative;
 }
 </style>
