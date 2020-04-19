@@ -208,7 +208,6 @@ export default {
   padding-right: 20px;
   vertical-align: top;
   display: inline-block;
-  height: 400px;
   width: 25%;
   border-style: solid;
   border-width: 1px;
@@ -251,7 +250,7 @@ export default {
   height: 90px;
 }
 .checkout .payment_method_panel .item:hover{
-  background-color: #fbfbff;
+  background-color: #f9f9f9;
 }
 .checkout .payment_method_panel .item .content{
   position: absolute;
@@ -276,6 +275,7 @@ export default {
   border-width: 1px;
   border-color: #dedede;
   border-radius: 20px;
+  background: white;
 }
 .checkout .item{
   color: #ababab;
@@ -292,6 +292,7 @@ export default {
   border-width: 1px;
   border-color: #dedede;
   border-radius: 20px;
+  background-color: white;
 }
 .checkout .item.selected i{
   color: #505050;
@@ -314,6 +315,7 @@ export default {
   border-width: 1px;
   border-color: #dedede;
   border-radius: 20px;
+  background: white;
 }
 
 .checkout .invisible{

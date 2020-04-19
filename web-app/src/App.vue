@@ -23,11 +23,30 @@ export default {
 
 <style>
 #app {
-  font-family: 'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+  background-image: url("./assets/geometric.jpg");
+  background-repeat: repeat;
+}
+* {
+  font-family: 'Quicksand', sans-serif ;
+}
+div{
+  font-family: 'Quicksand', sans-serif !important;
+}
+h1{
+  font-family: 'Quicksand', sans-serif !important;
+}
+h2{
+  font-family: 'Quicksand', sans-serif !important;
+}
+h3{
+  font-family: 'Quicksand', sans-serif !important;
+}
+h4{
+  font-family: 'Quicksand', sans-serif !important;
 }
 </style>

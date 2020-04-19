@@ -42,28 +42,42 @@ export default {
             name: "Jabón",
             price: 8900,
             description: "Una description",
-            image:"https://dam.cosmoenespanol.com/wp-content/uploads/2019/12/que%CC%81-jabon-debo-usar-para-mi-higiene-i%CC%81ntima.jpg"
+            image:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRp2iGZr56-17Uv2U3GcklWalhMLiuEJ3eAMFDKL0swNdp-NB7P&usqp=CAU"
         },
         {
             id: 2,
-            name: "Gel",
+            name: "Difenhidramina",
             price: 8900,
             description: "Una description",
-            image:"https://smoda.elpais.com/wp-content/uploads/2020/03/gel.jpg"
+            image:"https://www.aliraif.com.tr/wp-content/uploads/2018/11/Hydryllin_Surup-300x300.jpg"
         },
         {
             id: 3,
-            name: "Levonorgestrel",
+            name: "Aderrall",
             price: 8900,
             description: "Una description",
-            image:"https://farmaciainformativa.com/wp-content/uploads/2018/09/Levonorgestrel-0.75-mg-pastillas.jpg.webp"
+            image:"https://prescriptionhope.com/wp-content/uploads/2020/02/How-to-Make-Adderall-Last-Longer-and-Stronger-1024x683.jpg"
         },
         {
             id: 4,
             name: "Jabón",
             price: 8900,
             description: "Una description",
-            image:"https://dam.cosmoenespanol.com/wp-content/uploads/2019/12/que%CC%81-jabon-debo-usar-para-mi-higiene-i%CC%81ntima.jpg"
+            image:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRp2iGZr56-17Uv2U3GcklWalhMLiuEJ3eAMFDKL0swNdp-NB7P&usqp=CAU"
+        },
+        {
+            id: 5,
+            name: "Jabón",
+            price: 8900,
+            description: "Una description",
+            image:"https://static.psycom.net/wp-content/uploads/2016/01/Ritalin-methylphenidate-683x1024.jpg"
+        },
+        {
+            id: 6,
+            name: "Jabón",
+            price: 8900,
+            description: "Una description",
+            image:"https://i-cf5.gskstatic.com/content/dam/cf-consumer-healthcare/panadol/es_CO/dolex-products/activgel/Productos_455x455_activgel.png?auto=format"
         },
       ],
       products_in_cart : []
@@ -105,7 +119,7 @@ export default {
 
 <style lang="css" scoped>
 .home .nav{
-  background-color: #efefef;
+  background-color: #909090;
   height: 50px;
 }
 .home .catalog{
@@ -123,11 +137,16 @@ export default {
   float: right;
 }
 .home .cart_button .ui.circular.button{
+  background-color: #565656;
   display: inline-block;
   margin-top: 5px;
   margin-right: 10px;
   position: relative;
   vertical-align: middle;
+  color: white;
+}
+.home .cart_button .ui.circular.button *{
+  color: white;
 }
 
 </style>

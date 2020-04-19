@@ -2,7 +2,7 @@
   <div class="product">
     <div class="ui card">
       <div class="image">
-        <img :src="image" style="height:200px">
+        <img :src="image" style="height:250px">
       </div>
       <div class="content">
         <a class="header">{{name}}</a>
@@ -17,7 +17,7 @@
         </a>
       </div>
       <div class="extra content">
-        <button class="ui circular button everdose" @click="add({id, name, image, description, price})" >Add to cart</button>
+        <button class="ui button everdose" @click="add({id, name, image, description, price})" >ADD</button>
       </div>
     </div>
   </div>
@@ -39,9 +39,5 @@ export default {
 }
 .product .ui.card{
   border-color: yellow !important;
-}
-.ui.circular.button.everdose{
-  color: white;
-  background-color: #3851FF;
 }
 </style>

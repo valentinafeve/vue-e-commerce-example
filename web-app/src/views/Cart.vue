@@ -7,7 +7,7 @@
           <img :src="product.image">
         </div>
         <div class="content">
-          <a class="header">{{ product.name }}</a>
+          <div class="header">{{ product.name }}</div>
           <div class="meta">
           </div>
           <div class="description">
