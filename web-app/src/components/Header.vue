@@ -25,6 +25,7 @@ export default {
   text-align: left;
   font-family: 'Archivo', sans-serif;
   position: relative;
+  margin: 0px;
 }
 .header:hover{
   cursor: pointer;

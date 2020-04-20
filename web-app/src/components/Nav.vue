@@ -30,7 +30,7 @@
 import cookie from '../cookies'
 
 export default {
-  props:['search','cart','account', 'products_len'],
+  props:['search','cart','account','products_len'],
   data(){
     return {
     }
@@ -48,7 +48,7 @@ export default {
 
 <style lang="css" scoped>
 .nav{
-  background-color: #fafafa;
+  background-color: #f3f3f3;
   height: 50px;
 }
 .nav .main.search{

@@ -6,6 +6,19 @@
         <Product v-for="product in products" :key="product.id" :id="product.id" :name="product.name" :image="product.image" :description="product.description" :price="product.price" :add="addToCart"/>
       </div>
     </div>
+    <div class="pagination">
+      <div class="ui icon buttons">
+        <button class="ui button">
+          <i class="left chevron icon"></i>
+        </button>
+        <button class="ui button">
+          Current page
+        </button>
+        <button class="ui button">
+          <i class="right chevron icon"></i>
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,10 +44,10 @@ export default {
         },
         {
             id: 2,
-            name: "Difenhidramina",
+            name: "Advil MAX",
             price: 8900,
-            description: "Una description",
-            image:"https://www.aliraif.com.tr/wp-content/uploads/2018/11/Hydryllin_Surup-300x300.jpg"
+            description: "Presentación	CAPSULA Marca	ADVIL Dimensiones	8x7x4 cm Principio activo	IBUPROFENO Peso	0.12 Kg Opiniones verificadas	0 PUM - Medida	16 PUM - Unidad de Medida	Capsula",
+            image:"https://locatelcolombia.vteximg.com.br/arquivos/ids/198119-495-495/7702132004330-ADVIL-MAX-CAJA-X-16-CAPSULAS.png?v=636324465355700000"
         },
         {
             id: 3,
@@ -59,6 +72,62 @@ export default {
         },
         {
             id: 6,
+            name: "Dolex",
+            price: 8900,
+            description: "Una description",
+            image:"https://i-cf5.gskstatic.com/content/dam/cf-consumer-healthcare/panadol/es_CO/dolex-products/activgel/Productos_455x455_activgel.png?auto=format"
+        },
+        {
+            id: 7,
+            name: "Dolex 2",
+            price: 8900,
+            description: "Una description",
+            image:"https://i-cf5.gskstatic.com/content/dam/cf-consumer-healthcare/panadol/es_CO/dolex-products/activgel/Productos_455x455_activgel.png?auto=format"
+        },
+        {
+            id: 8,
+            name: "Dolex 3",
+            price: 8900,
+            description: "Una description",
+            image:"https://i-cf5.gskstatic.com/content/dam/cf-consumer-healthcare/panadol/es_CO/dolex-products/activgel/Productos_455x455_activgel.png?auto=format"
+        },
+        {
+            id: 9,
+            name: "Clotrimazol",
+            price: 18900,
+            description: "Una description",
+            image:"https://locatelcolombia.vteximg.com.br/arquivos/ids/208193-495-495/7703153036188_CLOTRIMAZOL-2--COLMED-CREMA-VAGINAL-X-20GR-.png?v=636845639859100000"
+        },
+        {
+            id: 10,
+            name: "Dolex 5",
+            price: 8900,
+            description: "Una description",
+            image:"https://i-cf5.gskstatic.com/content/dam/cf-consumer-healthcare/panadol/es_CO/dolex-products/activgel/Productos_455x455_activgel.png?auto=format"
+        },
+        {
+            id: 11,
+            name: "Fenalgex",
+            price: 8900,
+            description: "Una description",
+            image:"https://locatelcolombia.vteximg.com.br/arquivos/ids/207674-495-495/7702057014223_FENALGEX-325MG-5MG-X10-TABLETAS.png?v=636806621338700000"
+        },
+        {
+            id: 12,
+            name: "Jabón",
+            price: 8900,
+            description: "Una description",
+            image:"https://locatelcolombia.vteximg.com.br/arquivos/ids/221666-495-495/7891010076238_1_GEL-LIMPIADOR-NEUTROGENA-SPOT-PROOFING-X-200ML.jpg?v=637170531503530000"
+        },
+        {
+            id: 13,
+            name: "Jabón",
+            price: 8900,
+            description: "Una description",
+            image:"https://locatelcolombia.vteximg.com.br/arquivos/ids/176518-495-495/4104480705151-1.png?v=635950549975800000"
+        },
+        {
+            id: 14,
             name: "Jabón",
             price: 8900,
             description: "Una description",
@@ -113,6 +182,10 @@ export default {
 .home .catalog{
   padding-top: 40px;
   padding-bottom: 60px;
+}
+.home .pagination{
+  margin: 0 auto;
+  margin-bottom: 60px;
 }
 
 </style>

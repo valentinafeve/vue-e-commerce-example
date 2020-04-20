@@ -17,7 +17,9 @@
         </div>
       </div>
       <div class="extra content">
-        <div class="ui button circular black everdose" @click="add({id, name, image, description, price})" >Buy</div>
+        <div class="ui button circular teal everdose" @click="add({id, name, image, description, price})" >
+          <i class="cart icon"></i>
+          Add to cart</div>
       </div>
     </div>
   </div>

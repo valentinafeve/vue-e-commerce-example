@@ -3,13 +3,15 @@
     <div class="card">
       <div class="form_panel">
         <form class="ui form">
-          <div class="field">
+          <div class="field ui left icon input fluid">
+            <i class="user icon"></i>
             <input type="text" name="first-name" placeholder="Username">
           </div>
-          <div class="field">
-            <input type="password" name="last-name" placeholder="Password">
+          <div class="field ui left icon input fluid">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password">
           </div>
-          <div class="ui fluid black button" type="submit">Login</div>
+          <div class="ui large fluid black button" type="submit">Login</div>
         </form>
       </div>
     </div>

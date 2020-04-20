@@ -28,10 +28,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+  padding: 0px;
   /* background-image: url("./assets/geometric.jpg"); */
-  background-color: #fefefe;
+  background-color: #fdfdfd;
   background-repeat: repeat;
 }
+
 * {
   font-family: 'Archivo', sans-serif;
   font-weight: 100 !important;
