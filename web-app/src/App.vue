@@ -28,25 +28,38 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
-  background-image: url("./assets/geometric.jpg");
+  /* background-image: url("./assets/geometric.jpg"); */
+  background-color: #fefefe;
   background-repeat: repeat;
 }
 * {
-  font-family: 'Quicksand', sans-serif ;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 100 !important;
 }
 div{
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
+  font-weight: 100 !important;
 }
 h1{
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
+  font-weight: 100 !important;
 }
 h2{
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
+  font-weight: 100 !important;
 }
 h3{
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
+  font-weight: 100 !important;
 }
 h4{
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
+  font-weight: 100 !important;
+  font-size: 20px !important;
+}
+h5{
+  font-family: 'Archivo', sans-serif !important;
+  font-weight: 100 !important;
+  font-size: 20px !important;
 }
 </style>

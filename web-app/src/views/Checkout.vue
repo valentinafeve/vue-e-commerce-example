@@ -80,12 +80,12 @@
             </div>
 
           </div>
-          <div class="field">
+          <!-- <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" tabindex="0" class="hidden">
               <label>I agree to the Terms and Conditions</label>
             </div>
-          </div>
+          </div> -->
           <div @click="pay" class="ui fluid green button">Validate information</div>
         </form>
 
@@ -143,7 +143,7 @@
       <h4 class="ui dividing header">Total</h4>
       <div class="">
         <i class="dollar sign icon"></i>
-        65000
+        {{ total }}
       </div>
     </div>
 
@@ -151,6 +151,8 @@
 </template>
 
 <script>
+import cookie from '../cookies'
+
 export default {
   data(){
     return {
@@ -159,10 +161,17 @@ export default {
       on_delivery_selected: false,
     }
   },
-  /*global global_products_in_cart*/
-  /*eslint no-undef: "error"*/
+  computed:{
+    total(){
+      var total = 0;
+      for (var product of this.products){
+        total += product.price * product.amount;
+      }
+      return total;
+    }
+  },
   mounted(){
-    this.products = global_products_in_cart;
+    this.products = cookie.getCookie('products');
   },
   methods:{
     select(type){
@@ -201,7 +210,7 @@ export default {
   background-color: white;
   /* position: fixed; */
   right: 20px;
-  margin-top: 10px;
+  margin-top: 30px;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 20px;
@@ -250,7 +259,7 @@ export default {
   height: 90px;
 }
 .checkout .payment_method_panel .item:hover{
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
 }
 .checkout .payment_method_panel .item .content{
   position: absolute;

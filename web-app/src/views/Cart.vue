@@ -19,7 +19,6 @@
             <span>{{product.price}}</span>
           </div>
         </div>
-        <a class="ui floating red circular label">{{product.amount}}</a>
       </div>
     </div>
   </div>
@@ -54,6 +53,7 @@
 </template>
 
 <script>
+import cookie from '../cookies'
 export default {
     data(){
       return {
@@ -69,16 +69,16 @@ export default {
         return var_total;
       }
     },
-    /*global global_products_in_cart*/
-    /*eslint no-undef: "error"*/
     mounted(){
-      this.products = global_products_in_cart;
+      this.products = cookie.getCookie('products');
     }
 }
 </script>
 
 <style lang="css" scoped>
 .cart .cart_items{
+  width: 90%;
+  margin: 0 auto;
   padding: 20px;
 }
 .cart .information{
@@ -86,6 +86,7 @@ export default {
   padding-right: 70px;
 }
 .cart .items .item{
+  background-color: white;
   position: relative;
   margin-bottom: 30px;
   border-style: solid;

@@ -5,19 +5,19 @@
         <img :src="image" style="height:250px">
       </div>
       <div class="content">
-        <a class="header">{{name}}</a>
+        <div class="header">{{name}}</div>
         <div class="description">
           {{description}}
         </div>
       </div>
       <div class="extra content">
-        <a>
+        <div>
           <i class="dollar sign icon"></i>
           {{price}}
-        </a>
+        </div>
       </div>
       <div class="extra content">
-        <button class="ui button everdose" @click="add({id, name, image, description, price})" >ADD</button>
+        <div class="ui button circular black everdose" @click="add({id, name, image, description, price})" >Buy</div>
       </div>
     </div>
   </div>

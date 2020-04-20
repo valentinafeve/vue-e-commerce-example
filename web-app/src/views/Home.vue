@@ -1,25 +1,6 @@
 <template lang="html">
   <div class="home">
-    <div class="nav">
-      <div class="main search">
-        <div class="ui search">
-          <div class="ui fluid icon input">
-            <input class="prompt" type="text" placeholder="Search products...">
-            <i class="search icon"></i>
-          </div>
-          <div class="results"></div>
-        </div>
-      </div>
-      <div class="cart_button" @click="$router.push('cart')">
-        <div class="ui circular button">
-          <a class="item">
-            <i class="shopping cart icon"></i>
-            My cart
-            <div class="floating ui red circular label left">{{products_len}}</div>
-          </a>
-        </div>
-      </div>
-    </div>
+    <Nav search="true" account="true" cart="true" :products_len="products_len" />
     <div class="catalog">
       <div class="product">
         <Product v-for="product in products" :key="product.id" :id="product.id" :name="product.name" :image="product.image" :description="product.description" :price="product.price" :add="addToCart"/>
@@ -30,9 +11,13 @@
 
 <script>
 import Product from '../components/home/Product'
+import Nav from '../components/Nav'
+import cookie from '../cookies'
+
 export default {
   components: {
-    Product
+    Product,
+    Nav
   },
   data(){
     return {
@@ -85,32 +70,39 @@ export default {
   },
   computed:{
     products_len(){
-      var products_in_cart_len = 0;
-      for( var product of this.products_in_cart){
-        products_in_cart_len += product.amount;
+      var total = 0;
+      for( var product of this.products_in_cart ){
+        total += product.amount;
       }
-      return products_in_cart_len;
+      return total
     }
   },
+  mounted(){
+    console.log("Mounting")
+    this.products_in_cart = cookie.getCookie('products')
+    console.log(this.products_in_cart)
+  },
   methods:{
-    /*global global_products_in_cart*/
-    /*eslint no-undef: "error"*/
     addToCart( product ){
       var added = false;
-      for (var global_product of global_products_in_cart ){
+      for (var global_product of this.products_in_cart ){
         console.log(product.id)
         if (global_product.id == product.id) {
           console.log("Exists:")
           console.log(product.id)
              global_product.amount += 1;
              product.amount += 1;
+             cookie.setCookie('products',JSON.stringify(this.products_in_cart))
+            console.log(cookie.getCookie('products'))
              added = true;
         }
       }
       if (!added){
         product.amount = 1;
-        global_products_in_cart.push( product )
         this.products_in_cart.push( product )
+        console.log("Adding product")
+        cookie.setCookie('products',JSON.stringify(this.products_in_cart))
+        console.log(cookie.getCookie('products'))
       }
     }
   }
@@ -118,35 +110,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.home .nav{
-  background-color: #909090;
-  height: 50px;
-}
 .home .catalog{
   padding-top: 40px;
   padding-bottom: 60px;
-}
-.home .main.search{
-  margin-top: 6px;
-  margin-left: 15px;
-  width: 80%;
-  display: inline-block;
-}
-.home .cart_button{
-  display: inline-block;
-  float: right;
-}
-.home .cart_button .ui.circular.button{
-  background-color: #565656;
-  display: inline-block;
-  margin-top: 5px;
-  margin-right: 10px;
-  position: relative;
-  vertical-align: middle;
-  color: white;
-}
-.home .cart_button .ui.circular.button *{
-  color: white;
 }
 
 </style>

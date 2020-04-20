@@ -1,6 +1,9 @@
 <template lang="html">
-<div class="header">
+<div class="header" @click="$router.push('home')">
+  <span>
     EVERDOSE
+  </span>
+  <div class="line"/>
 </div>
 </template>
 
@@ -12,18 +15,29 @@ export default {
 <style lang="css" scoped>
 .header{
   width: 100%;
-  height: 120px;
-background: linear-gradient(180deg, rgba(0,14,96,1) 0%, rgba(5,0,51,1) 100%);
-background: rgb(0,14,96);
-background: #202030;
-  color: #ffffff;
+  height: 140px;
+  background: white;
+  color: black;
   font-size: 50px;
   font-weight: 200;
-  padding-top: 70px;
+  padding-top: 80px;
   align-items: left;
   text-align: left;
+  font-family: 'Archivo', sans-serif;
+  position: relative;
+}
+.header:hover{
+  cursor: pointer;
+}
+.header span{
   padding-left: 50px;
-  font-family: 'Quicksand', sans-serif;
-  text-shadow: 2px 2px 20px #dadada90;
+}
+.header .line{
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background: rgb(0,5,32);
+  background: linear-gradient(90deg, rgba(0,5,32,1) 0%, rgba(131,131,131,1) 100%);
 }
 </style>
